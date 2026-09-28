@@ -1,0 +1,9 @@
+# Générés par Hugo
+public/
+resources/
+.hugo_build.lock
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
