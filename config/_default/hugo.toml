@@ -1,9 +1,9 @@
 # Configuration commune (production et développement).
-# Le titre, la description, le texte du pied de page et les horaires sont dans hugo.yaml.
+# Le titre, la description, le texte du pied de page et les horaires sont dans hugo.yaml (modifiables depuis le CMS).
 #
 # Thème : Dot-Org (themes/dot-org), adaptations listées dans themes/dot-org/VENDORED.md.
 baseURL = 'https://example.org/'   # SANS chemin : hugo server garde le chemin du baseURL
-                                    # dans l'aperçu local ; injecté en prod par --baseURL
+                                    # et déplacerait /admin/ ; injecté en prod par --baseURL
 theme = 'dot-org'
 defaultContentLanguage = 'fr'
 locale = 'fr-FR'                    # remplace languageCode (déprécié 0.158, WARN vérifié)
@@ -14,10 +14,10 @@ canonifyURLs = false
 relativeURLs = false
 disableKinds = ['taxonomy', 'term'] # Dot-Org n'a aucune interface tags/catégories : évite des pages /tags/ et /categories/ vides
 summaryLength = 50
-# copyright (pied de page) : dans hugo.yaml
+# copyright (pied de page) : dans hugo.yaml, édité par le CMS (« Réglages du site »)
 
 [markup.goldmark.renderer]
-hardWraps = true                    # un retour à la ligne simple = saut de ligne visible
+hardWraps = true                    # Maj+Entrée dans Sveltia = saut de ligne visible
 unsafe = true                       # Dot-Org : ses shortcodes (cards, columns, intro…) émettent du HTML brut ; requis par le thème
 
 [markup.goldmark.renderHooks.image]
@@ -57,6 +57,6 @@ sticky_header = true
 # logo_on_white / logo_on_black volontairement absents : le titre du site s'affiche en texte.
 # NE JAMAIS définir : github.repo_url (lien « Edit on GitHub »), social_links.* (icônes), main_cta/footer_cta
 # (liens passés par absLangURL : cassés sous un sous-chemin), services.googleAnalytics.id.
-# adresse et horaires (bloc « Horaires » de l’accueil, layouts/index.html du thème) : dans hugo.yaml
+# adresse et horaires (bloc « Horaires » de l’accueil, layouts/index.html du thème) : dans hugo.yaml, édités par le CMS
 [params.accessibility]
 skip_text = 'Aller au contenu'

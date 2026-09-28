@@ -3,6 +3,9 @@ public/
 resources/
 .hugo_build.lock
 
+# Binaire Hugo téléchargé par scripts/start.*
+.tools/
+
 # Système
 .DS_Store
 Thumbs.db
