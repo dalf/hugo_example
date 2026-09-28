@@ -258,6 +258,8 @@ collections:
       - name: services
         label: Services
         file: content/services/index.md
+        # Les cartes sont dans le front matter (liste « cartes ») et rendues par
+        # themes/dot-org/layouts/services/single.html : aucun shortcode dans le texte.
         fields:
           - { name: title, label: Titre, widget: string }
           - name: description
@@ -265,10 +267,28 @@ collections:
             widget: text
             required: false
           - name: body
-            label: Contenu
+            label: Introduction
             widget: markdown
             editor_components: []
-            hint: 'Chaque service est une carte : {{< card >}} ### Nom du service, puis le texte, puis {{< /card >}}. Ne changez que le texte à l''intérieur des cartes.'
+            hint: Le texte affiché au-dessus des cartes.
+          - name: cartes
+            label: Cartes (un service par carte)
+            widget: list
+            required: false
+            summary: '{{fields.titre}}'
+            hint: Chaque carte a un titre et un court texte. Glissez les cartes pour changer l'ordre.
+            fields:
+              - { name: titre, label: Titre, widget: string }
+              - name: texte
+                label: Texte
+                widget: markdown
+                editor_components: []
+                hint: Deux ou trois phrases. Le gras et les liens fonctionnent.
+          - name: suite
+            label: Texte après les cartes
+            widget: markdown
+            required: false
+            editor_components: []
       - name: about
         label: À propos
         file: content/a-propos/index.md

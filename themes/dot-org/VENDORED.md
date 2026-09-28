@@ -42,6 +42,7 @@ ou `AJOUT LOCAL`.
 | `layouts/index.html` (ajout) | Accueil : contenu de `content/_index.md` puis trois blocs (horaires depuis `params.horaires` et adresse depuis `params.adresse`, carte omise si les deux sont vides ; 3 dernières actualités ; 3 prochains événements). Sans lui, `_default/list.html` listerait les pages de premier niveau sous le texte. |
 | `layouts/evenements/list.html`, `evenements/single.html`, `partials/event-meta.html`, `partials/event-item.html` (ajouts) | Agenda : le thème n'a pas de type « événement ». Lit `event_date`, `event_end`, `lieu` ; à venir (croissant) puis passés (décroissant) ; « maintenant » = moment de la construction. |
 | `layouts/partials/cover.html` (ajout) | Couverture d'un bundle (`image` ou `featured_image`, redimensionnée à 800 px dans les listes, jpeg/png/webp). |
+| `layouts/services/single.html` (ajout) | Page Services : le corps de `content/services/index.md` est l'introduction, puis une grille de cartes lue dans le front matter `params.cartes` (liste d'objets `titre`, `texte`), puis `params.suite` (markdown). Plus aucun shortcode `cards`/`card` dans le contenu : les cartes s'éditent comme un formulaire dans le CMS. |
 
 Non modifié (WARN restant sur Hugo 0.166) : `layouts/partials/language-selector.html` appelle `.Site.Languages`
 (déprécié 0.156, ERREUR de construction prévue vers Hugo 0.171 — issue amont #79). Version d'Hugo épinglée
