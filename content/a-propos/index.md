@@ -34,7 +34,7 @@ Tram 15, arrêt « Acacias » ; bus 11, arrêt « Bibliothèque ». Un parking �
 
 ## Contact
 
-- Téléphone : 022 000 00 00 (aux heures d'ouverture)
+- Téléphone : 022 000 00 01 (aux heures d'ouverture)
 - Courriel : bibliotheque@acacias.example
 - Par courrier : à l'adresse ci-dessus
 
